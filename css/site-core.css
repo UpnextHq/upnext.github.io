@@ -1,0 +1,4 @@
+/* hide hero section until page is loaded*/
+#newhero-section, #new-navbar, #rethinking-ril {
+	opacity: 0;
+  }
