@@ -131,9 +131,10 @@ $(() => {
         attr_medium: "organic",
       };
     }
-
-    analytics.identify(analytics?.user()?.anonymousId(), traits);
-    localStorage.setItem("attributionSetForUser","true");
+    analytics.ready(()=>{
+      analytics.identify(analytics?.user()?.anonymousId(), traits);
+      localStorage.setItem("attributionSetForUser","true");
+    });
   }
 
   $("#new-navbar").css("opacity", "1");
