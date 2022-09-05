@@ -45,3 +45,7 @@ function getParameterByName(name, url = window.location.href) {
   );
   analytics.page({},{context});
   }}();
+
+  $(()=>{
+	$('#new-navbar').css('opacity','1');
+ });
