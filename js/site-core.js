@@ -132,7 +132,7 @@ $(() => {
       };
     }
 
-    analytics.identify(traits);
+    analytics.identify(analytics.user().anonymousId(), traits);
     localStorage.setItem("attributionSetForUser","true");
   }
 
