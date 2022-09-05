@@ -75,7 +75,6 @@ async function trackEvent(eventName, params = {}, callback = undefined) {
         },
         obfuscate: "true",
       });
-      analytics.page({}, { context });
     }
 })();
 
