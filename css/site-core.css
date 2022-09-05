@@ -1,4 +1,17 @@
 /* hide hero section until page is loaded*/
-#newhero-section, #new-navbar, #rethinking-ril {
-	opacity: 0;
-  }
+#newhero-section,
+#new-navbar,
+#rethinking-ril {
+  opacity: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.overflow_hidescrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow_hidescrollbars {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
