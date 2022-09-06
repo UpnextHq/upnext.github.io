@@ -13,11 +13,11 @@ function loadAsset(filename, type) {
     
   } else if (type === 'css'){
     tag = document.createElement('link');
-    script.rel = 'stylesheet';
-    script.type = 'text/css';
-    script.href = `${assetsDomain}/css/${filename}`;
+    tag.rel = 'stylesheet';
+    tag.type = 'text/css';
+    tag.href = `${assetsDomain}/css/${filename}`;
   }
-  document.head.appendChild(script);
+  document.head.appendChild(tag);
 }
 
 function getParameterByName(name, url = window.location.href) {
