@@ -1,3 +1,25 @@
+function loadAsset(filename, type) {
+  let assetsDomain = 'https://upnexthq.github.io/wf-assets';
+  if (localStorage.getItem("dev_domain")){
+    assetsDomain = localStorage.getItem("dev_domain");
+    console.log('💥 Loading assets from dev server! 💥');
+  }
+
+  let tag;
+  if (type === 'js'){
+    tag = document.createElement('script');
+    tag.src = `${assetsDomain}/js/${filename}`;
+    tag.async = false; // This is required for synchronous execution
+    
+  } else if (type === 'css'){
+    tag = document.createElement('link');
+    script.rel = 'stylesheet';
+    script.type = 'text/css';
+    script.href = `${assetsDomain}/css/${filename}`;
+  }
+  document.head.appendChild(script);
+}
+
 function getParameterByName(name, url = window.location.href) {
   name = name.replace(/[\[\]]/g, "\\$&");
   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
