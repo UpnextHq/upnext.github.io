@@ -29,10 +29,7 @@ $(() => {
     ].forEach((attributionProperty) => {
       attributionValues[attributionProperty] =
         getParameterByName(attributionProperty);
-      if (
-        !attributionDetected &&
-        attributionValues[attributionProperty] !== ""
-      ) {
+      if (!attributionDetected && attributionValues[attributionProperty]) {
         attributionDetected = true;
       }
     });
@@ -51,9 +48,9 @@ $(() => {
         attr_medium: "organic",
       };
     }
-    analytics.ready(()=>{
+    analytics.ready(() => {
       analytics.identify(analytics?.user()?.anonymousId(), traits);
-      localStorage.setItem("attributionSetForUser","true");
+      localStorage.setItem("attributionSetForUser", "true");
     });
   }
 
