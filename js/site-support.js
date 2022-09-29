@@ -1,8 +1,8 @@
 $(() => {
   trackEvent("page.support");
 
-  var p1 = "bWFpbHRvOmZlZWRiYWNrQA==";
+  var p1 = "aGVsbG9A";
   var p2 = atob(p1) + "getupnext.com";
-  $(".getintouch").attr('href',p2);
-  $("#supportEmail").text(p2.replace('mai'+'lto:',''));
+  $(".getintouch").attr('href','mai'+'lto:'+p2);
+  $("#supportEmail").text(p2);
 });
