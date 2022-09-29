@@ -1,8 +1,8 @@
 $(() => {
   trackEvent("page.support");
 
-  $(".getintouch").click(() => {
-    var p1 = "bWFpbHRvOmZlZWRiYWNrQA==";
-    window.location = atob(p1) + "getupnext.com";
-  });
+  var p1 = "bWFpbHRvOmZlZWRiYWNrQA==";
+  var p2 = atob(p1) + "getupnext.com";
+  $(".getintouch").attr('href','mailto:'+p2);
+  $("#supportEmail").text(p2);
 });
