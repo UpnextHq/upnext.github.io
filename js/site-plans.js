@@ -8,6 +8,7 @@ var nocctrial = getParameterByName("nocctrial");
 var trialexpired = getParameterByName("trialexpired");
 
 
+
 trackEvent("page.selectPlan", { plan, coupon });
 
 var trialEnabled = trial || localStorage.getItem("trial") || true;
