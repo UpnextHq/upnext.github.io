@@ -15,9 +15,6 @@ var trialEnabled = trial || localStorage.getItem("trial") || true;
 
 var noccEnabled = nocctrial || localStorage.getItem("nocctrial") || false;
 
-if (trialEnabled) {
-  $("#plans-title").text("Start your 14-day free trial!");
-}
 
 if (noccEnabled) {
   if (trialexpired) {
@@ -25,6 +22,8 @@ if (noccEnabled) {
   } else{
     $("#plans-title").text("Subscribe to Upnext today!");
   }
+} else if (trialEnabled) {
+  $("#plans-title").text("Start your 14-day free trial!");
 }
 
 const updateSelectedPlan = (newPlan) => {
