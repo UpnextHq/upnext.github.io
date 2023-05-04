@@ -64,7 +64,8 @@ $(function () {
 
   if (noccEnabled) {
     if (trialexpired) {
-      $("#plans-title").text("Susbcribe to continue using Upnext!");
+      $("#plans-title").text("Your trial has ended");
+      $("#plans-subtitle").text("Your 30-day free trial has ended. Subscribe to continue using Upnext.");
     } else{
       $("#plans-title").text("Subscribe to Upnext today!");
     }
