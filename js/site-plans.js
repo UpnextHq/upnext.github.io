@@ -15,17 +15,6 @@ var trialEnabled = trial || localStorage.getItem("trial") || true;
 
 var noccEnabled = nocctrial || localStorage.getItem("nocctrial") || false;
 
-
-if (noccEnabled) {
-  if (trialexpired) {
-    $("#plans-title").text("Susbcribe to continue using Upnext!");
-  } else{
-    $("#plans-title").text("Subscribe to Upnext today!");
-  }
-} else if (trialEnabled) {
-  $("#plans-title").text("Start your 14-day free trial!");
-}
-
 const updateSelectedPlan = (newPlan) => {
   $(".plan-option").removeClass("plan-option-selected");
   $(".plan-option").each((index, plan) => {
@@ -72,6 +61,17 @@ const handleContinue = () => {
 };
 
 $(function () {
+
+  if (noccEnabled) {
+    if (trialexpired) {
+      $("#plans-title").text("Susbcribe to continue using Upnext!");
+    } else{
+      $("#plans-title").text("Subscribe to Upnext today!");
+    }
+  } else if (trialEnabled) {
+    $("#plans-title").text("Start your 14-day free trial!");
+  }
+
   $(".plan-option").each((index, plan) => {
     $(plan).click(() => {
       updateSelectedPlan($(plan).attr("data-plan"));
