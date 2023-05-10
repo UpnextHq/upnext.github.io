@@ -69,6 +69,7 @@ $(function () {
       $("#plans-subtitle").text("Your 30-day free trial has ended. Subscribe to continue using Upnext.").show();
     } else{
       $("#plans-title").text("Start your subscription today!");
+      $("#plans-subtitle").text("Experience full access with our 30-day free trial, then choose a plan that's right for you.").show();
     }
   } else if (trialEnabled) {
     $("#plans-title").text("Start your 14-day free trial!");
