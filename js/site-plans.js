@@ -13,7 +13,8 @@ trackEvent("page.selectPlan", { plan, coupon });
 
 var trialEnabled = trial || localStorage.getItem("trial") || true;
 
-var noccEnabled = nocctrial || localStorage.getItem("nocctrial") || false;
+var noccEnabled = nocctrial || localStorage.getItem("nocctrial") || true;
+var noccExpired = trialexpired || localStorage.getItem("trialexpired") || false;
 
 const updateSelectedPlan = (newPlan) => {
   $(".plan-option").removeClass("plan-option-selected");
@@ -63,9 +64,9 @@ const handleContinue = () => {
 $(function () {
 
   if (noccEnabled) {
-    if (trialexpired) {
+    if (noccExpired) {
       $("#plans-title").text("Your trial has ended");
-      $("#plans-subtitle").text("Your 30-day free trial has ended. Subscribe to continue using Upnext.");
+      $("#plans-subtitle").text("Your 30-day free trial has ended. Subscribe to continue using Upnext.").show();
     } else{
       $("#plans-title").text("Start your subscription today!");
     }
