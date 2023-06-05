@@ -40,7 +40,7 @@ const handleContinue = () => {
       "&coupon=" +
       (coupon || localStorage.getItem("coupon")) +
       "&trial=" +
-      trialEnabled +
+      (noccEnabled ? false : trialEnabled) +
       "&nocctrial=" +
       noccEnabled +
       (source ? "&source=" + source : "") +
